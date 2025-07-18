@@ -1,0 +1,112 @@
+/* style.css — Stylish login UI with dark blue and silver shades */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background: radial-gradient(circle at top left, #0f172a, #1e293b);
+  overflow: hidden;
+}
+
+.login-container {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+
+.login-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(16px);
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 400px;
+  width: 100%;
+  color: white;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+  z-index: 2;
+}
+
+.login-card h2 {
+  text-align: center;
+  font-size: 26px;
+  margin-bottom: 25px;
+  color: #f0f4f8;
+}
+
+.login-card label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: #d1d5db;
+}
+
+.login-card input,
+.login-card select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background-color: #1e293b;
+  color: white;
+  border: 1px solid #475569;
+  outline: none;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+.login-card input:focus,
+.login-card select:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px #3b82f655;
+}
+
+.login-card button {
+  width: 100%;
+  background: linear-gradient(to right, #1e40af, #3b82f6);
+  border: none;
+  color: white;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.login-card button:hover {
+  background: linear-gradient(to right, #1e3a8a, #2563eb);
+}
+
+.error-message {
+  color: #f87171;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Blurred gradient blob background */
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.25;
+  z-index: 0;
+}
+
+.blob.blue {
+  background: #3b82f6;
+  width: 500px;
+  height: 500px;
+  top: -100px;
+  left: -100px;
+}
+
+.blob.silver {
+  background: #cbd5e1;
+  width: 400px;
+  height: 400px;
+  bottom: -80px;
+  right: -80px;
+}
